@@ -84,7 +84,6 @@ button {
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-image: url('./assets/event.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -165,46 +164,6 @@ button {
   color: #eee;
 }
 
-/* birthday */
-.plc.b-1 {
-  background-image: url('./assets/birthday.jpg');
-}
-/* weddings */
-.plc.b-2 {
-  background-image: url('./assets/wedding.jpg');
-}
-/* corporate */
-.plc.b-3 {
-  background-image: url('./assets/corporate.jpg');
-}
-/* college  */
-.plc.b-4 {
-  background-image: url('./assets/college.jpg');
-}
-/* catering */
-.pdc.b-5 {
-  background-image: url('./assets/catering.jpg');
-}
-/* mandapam */
-.pdc.b-6 {
-  background-image: url('./assets/mandapa.jpg');
-}
-/* costumes */
-.pdc.b-7 {
-  background-image: url('./assets/costume.jpg');
-}
-/* music */
-.pdc.b-8 {
-  background-image: url('./assets/music.jpg');
-}
-/* lights */
-.pdc.b-9 {
-  background-image: url('./assets/lights.jpeg');
-}
-/* decor */
-.pdc.b-10 {
-  background-image: url('./assets/decoration.jpg');
-}
 
 .Contact {
   width: 600px;

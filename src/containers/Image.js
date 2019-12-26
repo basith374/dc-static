@@ -1,6 +1,5 @@
 import React from 'react';
 
 export default (props) => {
-    let src = process.env.AWSURL ? process.env.AWSURL + props.path : require('../../public' + props.path);
-    return <img src={src} />
+    return <img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/' + props.src} alt={props.name} />
 }

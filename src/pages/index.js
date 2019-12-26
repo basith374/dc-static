@@ -13,32 +13,35 @@ export default () => {
     if(window.google) mapCb();
     else window.initMap = mapCb;
   })
+  let image = (path) => {
+    return {backgroundImage: 'url(\'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/' + path + '\')'};
+  }
   return <div className="Home">
-    <div className="landing">
+    <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>
     </div>
     <div className="events">
       <div className="ttl">Events</div>
       <div className="plr">
         <Link to="/birthday-celebrations">
-          <div className="plc b-1">
+          <div className="plc" style={image('birthday.jpg')}>
             <div>Birthday Celebrations</div>
           </div>
         </Link>
         <Link to="/weddings">
-          <div className="plc b-2">
+          <div className="plc" style={image('wedding.jpg')}>
             <div>Weddings</div>
           </div>
         </Link>
         <Link to="/corporate-events">
-          <div className="plc b-3">
+          <div className="plc" style={image('corporate.jpg')}>
             <div>Corporate Events</div>
           </div>
         </Link>
       </div>
       <div className="plr">
         <Link to="/college-events">
-          <div className="plc b-4">
+          <div className="plc" style={image('college.jpg')}>
             <div>College Events</div>
           </div>
         </Link>
@@ -48,34 +51,34 @@ export default () => {
       <div className="ttl">Services</div>
       <div className="plr">
         <Link to="/mandapam">
-          <div className="pdc b-6">
+          <div className="pdc" style={image('mandapa.jpg')}>
             <div>Mandapam</div>
           </div>
         </Link>
         <Link to="/costumes">
-          <div className="pdc b-7">
+          <div className="pdc" style={image('costume.jpg')}>
             <div>Costumes</div>
           </div>
         </Link>
         <Link to="/lights">
-          <div className="pdc b-8">
+          <div className="pdc" style={image('lights.jpeg')}>
             <div>Lights</div>
           </div>
         </Link>
       </div>
       <div className="plr">
         <Link to="/music">
-          <div className="pdc b-9">
+          <div className="pdc" style={image('music.jpg')}>
             <div>Music &amp; DJ</div>
           </div>
         </Link>
         <Link to="/decor">
-          <div className="pdc b-10">
+          <div className="pdc" style={image('decoration.jpg')}>
             <div>Decor</div>
           </div>
         </Link>
         <Link to="/catering">
-          <div className="pdc b-5">
+          <div className="pdc" style={image('catering.jpg')}>
             <div>Catering</div>
           </div>
         </Link>

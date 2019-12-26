@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from '../containers/Image';
 
 let photos = [
     'birthday.jpg',
@@ -21,9 +22,9 @@ export default () => {
                 let idx = f * 3;
                 let max = photos.length - 1;
                 return <div className="phr" key={f}>
-                    <div className="phd"><Image src={'/assets/' + photos[idx % max]} /></div>
-                    <div className="phd"><Image src={'/assets/' + photos[(idx + 1) % max]} /></div>
-                    <div className="phd"><Image src={'/assets/' + photos[(idx + 2) % max]} /></div>
+                    <div className="phd"><Image src={photos[idx % max]} name="sample" /></div>
+                    <div className="phd"><Image src={photos[(idx + 1) % max]} name="sample" /></div>
+                    <div className="phd"><Image src={photos[(idx + 2) % max]} name="sample" /></div>
                 </div>
             })}
         </div>

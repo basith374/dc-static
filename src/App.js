@@ -30,7 +30,7 @@ function App() {
             <div className="lead">
               <div className="wttl">
                 <Link to="/">
-                  <img src={require('./assets/logo.png')} />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png'} />
                   <span>DC Events</span>
                 </Link>
               </div>
