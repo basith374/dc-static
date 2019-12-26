@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Muli, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  font-family: Muli;
+}
+textarea,
+input,
+button {
+  font-family: Muli;
+}
+
+/* app css */
+
+.App {
+  color: #555;
+}
+
+.App-hc {
+  background: #000;
+}
+.App-header {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+.App-header a {
+  padding: 2rem;
+  display: inline-block;
+  color: #fff;
+}
+.App-header .lead {
+  flex: 1
+}
+.App-header .trail {
+  display: flex;
+}
+.App-header .trail a {
+  display: flex;
+  line-height: 3rem;
+}
+.App-header .wttl a {
+  display: flex;
+  align-items: center;
+}
+.App-header .wttl img {
+  margin-right: 1rem;
+  width: 50px;
+  vertical-align: top;
+}
+.App-header .wttl span {
+  vertical-align: top;
+  font-size: 30px;
+}
+
+#map {
+  height: 500px;
+}
+
+.About {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+.About > div {
+  margin-bottom: 1rem;
+}
+
+.Home .landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-image: url('./assets/event.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.Home .landing a {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #fff;
+}
+.Home .services {
+  width: 1200px;
+  margin: 0 auto 6rem;
+}
+.Home .events {
+  width: 1200px;
+  margin: 0 auto;
+}
+.Home .plr {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.Home .pdc,
+.Home .plc {
+  flex: 1;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.plr a {
+  display: block;
+  width: 100%;
+}
+.Home .pdc div,
+.Home .plc div {
+  display: inline-block;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plr a + a {
+  margin-left: 10px;
+}
+.Home .ttl {
+  text-align: center;
+  padding: 3rem;
+  font-size: 25px;
+}
+.Home .footer {
+  background: #333;
+  color: #eee;
+  padding: 6rem 0;
+}
+.Home .footer-in {
+  width: 800px;
+  display: flex;
+  margin: 0 auto;
+}
+.Home .footer .f-l {
+  flex: 1;
+}
+
+.Home .footer .f-l > div,
+.Home .footer .f-r > div {
+  margin-bottom: 1rem;
+}
+
+.Home .footer .hd {
+  text-transform: uppercase;
+}
+
+.Home .footer a {
+  color: #eee;
+}
+
+/* birthday */
+.plc.b-1 {
+  background-image: url('./assets/birthday.jpg');
+}
+/* weddings */
+.plc.b-2 {
+  background-image: url('./assets/wedding.jpg');
+}
+/* corporate */
+.plc.b-3 {
+  background-image: url('./assets/corporate.jpg');
+}
+/* college  */
+.plc.b-4 {
+  background-image: url('./assets/college.jpg');
+}
+/* catering */
+.pdc.b-5 {
+  background-image: url('./assets/catering.jpg');
+}
+/* mandapam */
+.pdc.b-6 {
+  background-image: url('./assets/mandapa.jpg');
+}
+/* costumes */
+.pdc.b-7 {
+  background-image: url('./assets/costume.jpg');
+}
+/* music */
+.pdc.b-8 {
+  background-image: url('./assets/music.jpg');
+}
+/* lights */
+.pdc.b-9 {
+  background-image: url('./assets/lights.jpeg');
+}
+/* decor */
+.pdc.b-10 {
+  background-image: url('./assets/decoration.jpg');
+}
+
+.Contact {
+  width: 600px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+.Contact button {
+  cursor: pointer;
+}
+.Contact button:active,
+.Contact button.actv {
+  background: #efefef;
+}
+.Contact .opt > div,
+.Contact .inp {
+  margin-bottom: 1rem;
+}
+.Contact button,
+.Contact textarea,
+.Contact input {
+  background: transparent;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 1rem;
+  outline: none
+}
+
+.Photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.Photos .phr {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.Photos .phd {
+  background: #ccc;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+.Photos .phd + .phd {
+  margin-left: 1rem;
+}
+.Photos .phd img {
+  min-width: 100%;
+  height: 100%;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
