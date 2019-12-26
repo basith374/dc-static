@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Root, Routes, addPrefetchExcludes } from 'react-static'
+import { Root, Routes, addPrefetchExcludes, Head } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
 import Dynamic from 'containers/Dynamic'
@@ -19,11 +19,15 @@ function loadJS(src) {
 
 function App() {
   useEffect(() => {
-    loadJS('https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_API_KEY + '&callback=initMap');
+    loadJS('https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_API + '&callback=initMap');
     if(!window.initMap) window.initMap = () => {}
   }, []);
   return (
     <Root>
+      <Head>
+        <title>DC Events</title>
+        <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
+      </Head>
       <div className="App">
         <div className="App-hc">
           <header className="App-header">

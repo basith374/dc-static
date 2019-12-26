@@ -20,7 +20,7 @@ export default () => {
                         className: event === f ? 'actv' : '',
                         onMouseDown: () => setEvent(f),
                     }
-                    return <div>
+                    return <div key={f}>
                         <button {...props}>{f}</button>
                     </div>
                 })}
