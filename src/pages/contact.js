@@ -12,7 +12,7 @@ let items = [
 export default () => {
     let [event, setEvent] = useState('');
     return (
-        <div className="Contact" data-netlify="true">
+        <form className="Contact" data-netlify="true">
             <Head>
                 <title>Contact us</title>
             </Head>
@@ -25,7 +25,7 @@ export default () => {
                         onMouseDown: () => setEvent(f),
                     }
                     return <div key={f}>
-                        <button {...props}>{f}</button>
+                        <button type="button" {...props}>{f}</button>
                     </div>
                 })}
             </div>
@@ -40,6 +40,6 @@ export default () => {
             <div>
                 <button className="cob">SUBMIT</button>
             </div>
-        </div>
+        </form>
     )
 }
