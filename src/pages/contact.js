@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Head } from 'react-static';
 
 let items = [
     'Birthday',
@@ -12,6 +13,9 @@ export default () => {
     let [event, setEvent] = useState('');
     return (
         <div className="Contact">
+            <Head>
+                <title>Contact us</title>
+            </Head>
             <div className="opt">
                 <div>What kind of event? <span>*</span></div>
                 {items.map(f => {

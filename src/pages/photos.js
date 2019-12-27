@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../containers/Image';
+import { Head } from 'react-static';
 
 let photos = [
     'birthday.jpg',
@@ -18,6 +19,9 @@ let photos = [
 export default () => {
     return (
         <div className="Photos">
+            <Head>
+                <title>Photos</title>
+            </Head>
             {[...Array(18).keys()].map(f => {
                 let idx = f * 3;
                 let max = photos.length - 1;

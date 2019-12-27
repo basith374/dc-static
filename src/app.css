@@ -94,9 +94,8 @@ button {
 
 .About {
   text-align: center;
-  width: 600px;
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 6rem 2rem;
 }
 .About > div {
   margin-bottom: 1rem;
@@ -117,6 +116,9 @@ button {
   color: #fff;
 }
 @media only screen and (min-width: 600px) {
+  .About {
+    width: 600px;
+  }
   .Home .services {
     width: 1200px;
     margin: 0 auto 6rem;
@@ -250,6 +252,7 @@ button {
 @media only screen and (min-width: 600px) {
   .Photos .phr {
     display: flex;
+    justify-content: center;
   }
   .Contact {
     width: 600px;

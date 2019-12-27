@@ -1,22 +1,31 @@
 import React, { useEffect } from 'react'
 import { Link } from 'components/Router'
+import { Head } from 'react-static';
+import { loadJS } from '../App';
 
 export default () => {
   useEffect(() => {
-    let mapCb = () => {
-      let el = document.getElementById('map');
-      if(el) new window.google.maps.Map(document.getElementById('map'), {
-        center: {lat: 12.104083, lng: 75.203500},
-        zoom: 12,
-      });
-    }
-    if(window.google) mapCb();
-    else window.initMap = mapCb;
-  })
+    loadJS();
+    setTimeout(() => {
+      document.getElementById('map').innerHTML = '';
+      let map = window.L.map('map').setView([12.104083, 75.203500], 14);
+      window.L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        accessToken: 'pk.eyJ1IjoiYmFzaXRoa3VuaW1hbCIsImEiOiJjaXJvdTNsaGIwZDR2ZmFtNnlzcnhzYmxtIn0.ycqG1O0DhIMfKcsLacSbeg'
+      }).addTo(map);
+      window.L.marker([12.104083, 75.203500]).addTo(map)
+          .bindPopup('DC Events Office Payyanur.')
+    }, 1000)
+  }, [])
   let image = (path) => {
     return {backgroundImage: 'url(\'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/' + path + '\')'};
   }
   return <div className="Home">
+    <Head>
+      <title>DC Events</title>
+    </Head>
     <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>
     </div>
