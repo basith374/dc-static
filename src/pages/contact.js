@@ -12,7 +12,7 @@ let items = [
 export default () => {
     let [event, setEvent] = useState('');
     return (
-        <form className="Contact" name="contact" method="POST" data-netlify="true">
+        <form className="Contact" name="contact" action="/thank-you" method="POST" data-netlify="true">
             <Head>
                 <title>Contact us</title>
             </Head>
