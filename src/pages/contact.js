@@ -28,17 +28,18 @@ export default () => {
                         <button type="button" {...props}>{f}</button>
                     </div>
                 })}
+                <input type="hidden" name="event" value={event} />
             </div>
             <div className="inp">Contact <span>*</span></div>
             <div className="inp">
-                <input type="text" placeholder="Mobile no" />
+                <input type="text" placeholder="Mobile no" name="mobileno" />
             </div>
             <div className="inp">Comments</div>
             <div className="inp">
-                <textarea placeholder="Any comments or ideas about your event?" rows="10"></textarea>
+                <textarea name="comments" placeholder="Any comments or ideas about your event?" rows="10"></textarea>
             </div>
             <div>
-                <button className="cob">SUBMIT</button>
+                <button className="cob" type="submit">SUBMIT</button>
             </div>
         </form>
     )
