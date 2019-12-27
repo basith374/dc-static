@@ -12,7 +12,7 @@ let items = [
 export default () => {
     let [event, setEvent] = useState('');
     return (
-        <form className="Contact" data-netlify="true">
+        <form className="Contact" action="/" method="POST" data-netlify="true">
             <Head>
                 <title>Contact us</title>
             </Head>
@@ -37,6 +37,9 @@ export default () => {
             <div className="inp">Comments</div>
             <div className="inp">
                 <textarea name="comments" placeholder="Any comments or ideas about your event?" rows="10"></textarea>
+            </div>
+            <div className="inp">
+                <div data-netlify-recaptcha="true"></div>
             </div>
             <div>
                 <button className="cob" type="submit">SUBMIT</button>
