@@ -22,15 +22,12 @@ export default () => {
             <Head>
                 <title>Photos</title>
             </Head>
-            {[...Array(18).keys()].map(f => {
-                let idx = f * 3;
-                let max = photos.length - 1;
-                return <div className="phr" key={f}>
-                    <div className="phd"><Image src={photos[idx % max]} name="sample" /></div>
-                    <div className="phd"><Image src={photos[(idx + 1) % max]} name="sample" /></div>
-                    <div className="phd"><Image src={photos[(idx + 2) % max]} name="sample" /></div>
-                </div>
-            })}
+            <div className="phr">
+                {[...Array(18).keys()].map(f => {
+                    let max = photos.length - 1;
+                    return <div className="phd" key={f}><Image src={photos[f % max]} name="sample" /></div>
+                })}
+            </div>
         </div>
     )
 }

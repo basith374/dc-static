@@ -62,7 +62,7 @@ button {
 @media only screen and (min-width: 600px) {
   .App-header {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
   }
   .App-header .trail {
     display: flex;
@@ -229,19 +229,18 @@ button {
 }
 
 .Photos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 5rem 0;
 }
 .Photos .phr {
-  width: 100%;
+  display: flex;
+  flex-flow: wrap;
 }
 .Photos .phd {
   background: #ccc;
   height: 300px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
+  float: left;
 }
 .Photos .phd img {
   min-width: 100%;
@@ -249,18 +248,21 @@ button {
   margin-left: 50%;
   transform: translate(-50%, 0);
 }
-@media only screen and (min-width: 600px) {
-  .Photos .phr {
-    display: flex;
-    justify-content: center;
+@media only screen and (min-width: 400px) {
+  .Photos .phd {
+    width: 400px;
   }
+}
+@media only screen and (min-width: 600px) {
+  /* .Photos .phr {
+  } */
   .Contact {
     width: 600px;
   }
   .Photos .phd {
-    width: 400px;
+    width: 300px;
   }
-  .Photos .phd + .phd {
+  /* .Photos .phd + .phd {
     margin-left: 1rem;
-  }
+  } */
 }
