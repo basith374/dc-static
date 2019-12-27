@@ -29,6 +29,7 @@ export default () => {
                     </div>
                 })}
                 <input type="hidden" name="event" value={event} />
+                <input type="hidden" name="form-name" value="contact" />
             </div>
             <div className="inp">Contact <span>*</span></div>
             <div className="inp">
