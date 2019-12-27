@@ -12,7 +12,7 @@ let items = [
 export default () => {
     let [event, setEvent] = useState('');
     return (
-        <div className="Contact">
+        <div className="Contact" data-netlify="true">
             <Head>
                 <title>Contact us</title>
             </Head>
