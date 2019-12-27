@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Root, Routes, addPrefetchExcludes, Head } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
@@ -19,9 +19,10 @@ function loadJS(src) {
 
 function App() {
   useEffect(() => {
-    loadJS('https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_API + '&callback=initMap');
+  loadJS('https://maps.googleapis.com/maps/api/js?key=AIzaSyCcgKyMc-z-yfVB41Wxh7oF2kiYQC6PTFk&callback=initMap');
     if(!window.initMap) window.initMap = () => {}
   }, []);
+  let [showMenu, setShowMenu] = useState(false);
   return (
     <Root>
       <Head>
@@ -30,7 +31,7 @@ function App() {
       </Head>
       <div className="App">
         <div className="App-hc">
-          <header className="App-header">
+          <header className={"App-header" + (showMenu ? ' open' : '')}>
             <div className="lead">
               <div className="wttl">
                 <Link to="/">
@@ -38,6 +39,9 @@ function App() {
                   <span>DC Events</span>
                 </Link>
               </div>
+            </div>
+            <div className="ham">
+              <button onClick={() => setShowMenu(!showMenu)}><img src={require('menu.svg')} width="32" /></button>
             </div>
             <div className="trail">
               <Link to="/contact">Contact</Link>

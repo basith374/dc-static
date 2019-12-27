@@ -32,8 +32,6 @@ button {
   background: #000;
 }
 .App-header {
-  display: flex;
-  width: 1200px;
   margin: 0 auto;
 }
 .App-header a {
@@ -45,11 +43,36 @@ button {
   flex: 1
 }
 .App-header .trail {
-  display: flex;
+  display: none;
 }
 .App-header .trail a {
   display: flex;
   line-height: 3rem;
+}
+.App-header .ham {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.App-header .ham button {
+  padding: 40px 30px;
+  background: none;
+  border: none;
+}
+@media only screen and (min-width: 600px) {
+  .App-header {
+    display: flex;
+    width: 1200px;
+  }
+  .App-header .trail {
+    display: flex;
+  }
+  .App-header .ham {
+    display: none;
+  }
+}
+.App-header.open .trail {
+  display: flex;
 }
 .App-header .wttl a {
   display: flex;
@@ -93,16 +116,23 @@ button {
   padding: 1rem;
   color: #fff;
 }
-.Home .services {
-  width: 1200px;
-  margin: 0 auto 6rem;
-}
-.Home .events {
-  width: 1200px;
-  margin: 0 auto;
+@media only screen and (min-width: 600px) {
+  .Home .services {
+    width: 1200px;
+    margin: 0 auto 6rem;
+  }
+  .Home .events {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .Home .plr {
+    display: flex;
+  }
+  .plr a + a {
+    margin-left: 10px;
+  }
 }
 .Home .plr {
-  display: flex;
   margin-bottom: 1rem;
 }
 .Home .pdc,
@@ -129,9 +159,6 @@ button {
   justify-content: center;
   align-items: center;
 }
-.plr a + a {
-  margin-left: 10px;
-}
 .Home .ttl {
   text-align: center;
   padding: 3rem;
@@ -143,12 +170,12 @@ button {
   padding: 6rem 0;
 }
 .Home .footer-in {
-  width: 800px;
-  display: flex;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 .Home .footer .f-l {
   flex: 1;
+  margin-bottom: 5rem;
 }
 
 .Home .footer .f-l > div,
@@ -164,11 +191,19 @@ button {
   color: #eee;
 }
 
+@media only screen and (min-width: 600px) {
+  .Home .footer-in {
+    display: flex;
+    width: 800px;
+  }
+  .Home .footer .f-l {
+    margin: 0;
+  }
+}
 
 .Contact {
-  width: 600px;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 }
 .Contact button {
   cursor: pointer;
@@ -198,21 +233,31 @@ button {
   padding: 5rem 0;
 }
 .Photos .phr {
-  display: flex;
-  margin-bottom: 1rem;
+  width: 100%;
 }
 .Photos .phd {
   background: #ccc;
   height: 300px;
-  width: 400px;
   overflow: hidden;
-}
-.Photos .phd + .phd {
-  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 .Photos .phd img {
   min-width: 100%;
   height: 100%;
   margin-left: 50%;
   transform: translate(-50%, 0);
+}
+@media only screen and (min-width: 600px) {
+  .Photos .phr {
+    display: flex;
+  }
+  .Contact {
+    width: 600px;
+  }
+  .Photos .phd {
+    width: 400px;
+  }
+  .Photos .phd + .phd {
+    margin-left: 1rem;
+  }
 }

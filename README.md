@@ -1,3 +1,1 @@
-# React-Static - Basic Template
-
-To use this template, run `react-static create` and use the `basic` template.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6eb2ea60-a375-4794-b91b-cf601c2376eb/deploy-status)](https://app.netlify.com/sites/dcevents/deploys)
