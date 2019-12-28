@@ -41,9 +41,7 @@ function App() {
           <header className={"App-header" + (showMenu ? ' open' : '')}>
             <div className="lead">
               <div className="wttl">
-                <Link to="/">
-                  <img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/dcblack.png'} />
-                </Link>
+                <Link to="/">DC Events</Link>
               </div>
             </div>
             <div className="ham">

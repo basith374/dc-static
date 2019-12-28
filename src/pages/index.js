@@ -124,7 +124,7 @@ export default () => {
             </a>
           </div>
           <div className="closer">
-            <div><img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/dcwhite.png'} /></div>
+            <div><img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png'} /></div>
             <small>&copy; 2020 D Company</small>
           </div>
         </div>

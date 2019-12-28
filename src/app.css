@@ -74,12 +74,9 @@ button {
 .App-header.open .trail {
   display: flex;
 }
-.App-header .wttl img {
-  vertical-align: top;
-}
-.App-header .wttl span {
-  vertical-align: top;
+.App-header .wttl a {
   font-size: 30px;
+  padding: 1.5rem;
 }
 .App-hc .stripes {
   height: 6px;
@@ -219,6 +216,7 @@ button {
 }
 .Home .footer .closer img {
   margin-bottom: 10px;
+  width: 100px;
 }
 
 @media only screen and (min-width: 600px) {
