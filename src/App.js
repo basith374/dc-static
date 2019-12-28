@@ -43,13 +43,6 @@ function App() {
                 <Link to="/">DC Events</Link>
               </div>
             </div>
-            <div className="mid">
-              <div className="social">
-                  <a href="https://www.facebook.com/DC-events-340798790145828/" className="fb">
-                    <div></div>
-                  </a>
-                </div>
-            </div>
             <div className="ham">
               <button onClick={toggleMenu}><img src={require('menu.svg')} width="32" /></button>
             </div>
@@ -59,6 +52,13 @@ function App() {
               <Link to="/about">About</Link>
             </div>
           </header>
+        </div>
+        <div className="flt-btn">
+          <div className="social">
+              <a href="https://wa.me/919526696669" className="wa">
+                <div></div>
+              </a>
+            </div>
         </div>
         <React.Suspense fallback={<em>Loading...</em>}>
           <Router>
