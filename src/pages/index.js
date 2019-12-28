@@ -100,8 +100,9 @@ export default () => {
         <div className="f-l">
           <div className="hd">Locations served</div>
           <div><Link to="/event-managers-in-payyannur">Payyannur</Link></div>
-          <div><Link to="/event-managers-in-thalassery">Thalassery</Link></div>
+          <div><Link to="/event-managers-in-taliparamba">Taliparamba</Link></div>
           <div><Link to="/event-managers-in-kannur">Kannur</Link></div>
+          <div><Link to="/event-managers-in-thalassery">Thalassery</Link></div>
           <div><Link to="/event-managers-in-mahe">Mahe</Link></div>
         </div>
         <div className="f-r">
