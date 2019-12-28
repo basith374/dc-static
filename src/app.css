@@ -28,16 +28,13 @@ button {
   color: #555;
 }
 
-.App-hc {
-  background: #000;
-}
 .App-header {
   margin: 0 auto;
 }
 .App-header a {
   padding: 2rem;
   display: inline-block;
-  color: #fff;
+  /* color: #fff; */
 }
 .App-header .lead {
   flex: 1
@@ -47,15 +44,18 @@ button {
 }
 .App-header .trail a {
   display: flex;
-  line-height: 3rem;
+  line-height: 25px;
 }
 .App-header .ham {
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 0;
 }
+.App-header .ham img {
+  filter: invert(100%);
+}
 .App-header .ham button {
-  padding: 40px 30px;
+  padding: 27px;
   background: none;
   border: none;
 }
@@ -74,18 +74,16 @@ button {
 .App-header.open .trail {
   display: flex;
 }
-.App-header .wttl a {
-  display: flex;
-  align-items: center;
-}
 .App-header .wttl img {
-  margin-right: 1rem;
-  width: 50px;
   vertical-align: top;
 }
 .App-header .wttl span {
   vertical-align: top;
   font-size: 30px;
+}
+.App-hc .stripes {
+  height: 6px;
+  background-image: url(https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/stripes.png);
 }
 
 #map {
@@ -187,10 +185,40 @@ button {
 
 .Home .footer .hd {
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .Home .footer a {
-  color: #eee;
+  color: #aaa;
+}
+.Home .footer a:hover {
+  color: #fff;
+}
+.Home .footer .social {
+  margin-left: -10px;
+}
+.Home .footer .social a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50%;
+}
+.Home .footer .social a div {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-image: url(https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/social_white.png);
+  vertical-align: top;
+}
+
+.Home .footer .social a.fb div {
+  background-position: 25px;
+}
+.Home .footer .social a.in div {
+  background-position: 50px;
+}
+.Home .footer .closer img {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -205,7 +233,7 @@ button {
 
 .Contact {
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 2rem;
 }
 .Contact button {
   cursor: pointer;
@@ -229,40 +257,45 @@ button {
 }
 
 .Photos {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .Photos .phr {
-  display: flex;
-  flex-flow: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
 .Photos .phd {
   background: #ccc;
   height: 300px;
   overflow: hidden;
   margin: 0 auto 1rem;
-  float: left;
+  display: inline-block;
+  width: 100%;
 }
 .Photos .phd img {
-  min-width: 100%;
   height: 100%;
   margin-left: 50%;
   transform: translate(-50%, 0);
 }
 @media only screen and (min-width: 400px) {
   .Photos .phd {
-    width: 400px;
+    width: 50%;
+  }
+  .Photos .phd img {
+    width: auto;
   }
 }
 @media only screen and (min-width: 600px) {
-  /* .Photos .phr {
-  } */
   .Contact {
     width: 600px;
   }
+}
+@media only screen and (min-width: 800px) {
   .Photos .phd {
-    width: 300px;
+    width: 33.33%;
   }
-  /* .Photos .phd + .phd {
-    margin-left: 1rem;
-  } */
+}
+@media only screen and (min-width: 1200px) {
+  .Photos .phd {
+    width: 25%;
+  }
 }

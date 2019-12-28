@@ -8,7 +8,7 @@ export default () => {
     loadJS();
     setTimeout(() => {
       document.getElementById('map').innerHTML = '';
-      let map = window.L.map('map').setView([12.104083, 75.203500], 14);
+      let map = window.L.map('map', {scrollWheelZoom: false}).setView([12.104083, 75.203500], 14);
       window.L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
@@ -25,6 +25,7 @@ export default () => {
   return <div className="Home">
     <Head>
       <title>DC Events</title>
+      <meta></meta>
     </Head>
     <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>
@@ -105,8 +106,27 @@ export default () => {
         </div>
         <div className="f-r">
           <div className="hd">Contact</div>
-          <div>9526696669</div>
-          <div>dcevents@gmail.com</div>
+          <div>
+            <a href="tel:+919526696669">9526696669</a>
+          </div>
+          <div>
+            <a href="mailto:dcevents@gmail.com">dcevents@gmail.com</a>
+          </div>
+          <div className="social">
+            <a href="https://www.facebook.com/DC-events-340798790145828/" className="fb">
+              <div></div>
+            </a>
+            <a href="https://wa.me/919526696669" className="wa">
+              <div></div>
+            </a>
+            <a href="https://www.instagram.com/dc_eventz/" className="in">
+              <div></div>
+            </a>
+          </div>
+          <div className="closer">
+            <div><img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/dcwhite.png'} /></div>
+            <small>&copy; 2020 D Company</small>
+          </div>
         </div>
       </div>
     </div>

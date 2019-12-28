@@ -37,12 +37,12 @@ function App() {
       </Head>
       <div className="App">
         <div className="App-hc">
+          <div className="stripes"></div>
           <header className={"App-header" + (showMenu ? ' open' : '')}>
             <div className="lead">
               <div className="wttl">
                 <Link to="/">
-                  <img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png'} />
-                  <span>DC Events</span>
+                  <img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/dcblack.png'} />
                 </Link>
               </div>
             </div>

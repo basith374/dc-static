@@ -35,6 +35,10 @@ export default () => {
             <div className="inp">
                 <input type="text" placeholder="Mobile no" name="mobileno" />
             </div>
+            <div className="inp">Name <span>*</span></div>
+            <div className="inp">
+                <input type="text" placeholder="Your name" name="name" />
+            </div>
             <div className="inp">Comments</div>
             <div className="inp">
                 <textarea name="comments" placeholder="Any comments or ideas about your event?" rows="10"></textarea>
