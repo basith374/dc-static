@@ -27,7 +27,6 @@ export function loadJS() {
 function App() {
   let [showMenu, setShowMenu] = useState(false);
   let toggleMenu = e => {
-    e.preventDefault();
     setShowMenu(!showMenu);
   }
   return (
@@ -44,8 +43,15 @@ function App() {
                 <Link to="/">DC Events</Link>
               </div>
             </div>
+            <div className="mid">
+              <div className="social">
+                  <a href="https://www.facebook.com/DC-events-340798790145828/" className="fb">
+                    <div></div>
+                  </a>
+                </div>
+            </div>
             <div className="ham">
-              <button onClick={toggleMenu} type="button"><img src={require('menu.svg')} width="32" /></button>
+              <button onClick={toggleMenu}><img src={require('menu.svg')} width="32" /></button>
             </div>
             <div className="trail">
               <Link to="/contact">Contact</Link>
