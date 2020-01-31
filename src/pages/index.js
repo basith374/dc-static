@@ -99,11 +99,11 @@ export default () => {
       <div className="footer-in">
         <div className="f-l">
           <div className="hd">Locations served</div>
-          <div><Link to="/event-managers-in-payyannur">Payyannur</Link></div>
-          <div><Link to="/event-managers-in-taliparamba">Taliparamba</Link></div>
-          <div><Link to="/event-managers-in-kannur">Kannur</Link></div>
-          <div><Link to="/event-managers-in-thalassery">Thalassery</Link></div>
-          <div><Link to="/event-managers-in-mahe">Mahe</Link></div>
+          <div><Link to="/find/event-managers-in-payyannur">Payyannur</Link></div>
+          <div><Link to="/find/event-managers-in-taliparamba">Taliparamba</Link></div>
+          <div><Link to="/find/event-managers-in-kannur">Kannur</Link></div>
+          <div><Link to="/find/event-managers-in-thalassery">Thalassery</Link></div>
+          <div><Link to="/find/event-managers-in-mahe">Mahe</Link></div>
         </div>
         <div className="f-r">
           <div className="hd">Contact</div>
@@ -125,7 +125,7 @@ export default () => {
             </a>
           </div>
           <div className="closer">
-            <div><img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png'} /></div>
+            <div><img src={'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png'} alt="payyannur event managers" /></div>
             <small>&copy; 2020 D Company</small>
           </div>
         </div>

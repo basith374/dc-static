@@ -33,6 +33,8 @@ function App() {
     <Root>
       <Head>
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
+        <meta name="description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate &amp; college events." />
+        <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
       </Head>
       <div className="App">
         <div className="App-hc">
