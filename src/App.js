@@ -24,13 +24,19 @@ export function loadJS() {
   document.head.appendChild(link);
 }
 
+export const title = 'DC Events';
+const url = 'https://thedcevents.com';
+export const logo = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png';
+const desc = 'DC Events is an event management company located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events.'
+export const phone = '9526696669';
+
 const structuredJSON = JSON.stringify({
   "@context": "http://www.schema.org",
   "@type": "ProfessionalService",
-  "name": "DC Events",
-  "url": "https://thedcevents.com",
-  "logo": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png",
-  "image": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png",
+  "name": title,
+  "url": url,
+  "logo": logo,
+  "image": logo,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Payyannur",
@@ -38,7 +44,7 @@ const structuredJSON = JSON.stringify({
     "postalCode": "670307",
     "addressCountry": "India"
   },
-  "telephone": "+919526696669",
+  "telephone": '+91' + phone,
   "priceRange": "$"
 })
 
@@ -51,21 +57,21 @@ function App() {
     <Root>
       <Head>
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
-        <meta name="description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate &amp; college events." />
+        <meta name="description" content={desc} />
         <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
         <script type='application/ld+json'>{structuredJSON}</script>
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thedcevents.com/" />
-        <meta property="og:title" content="DC Events" />
-        <meta property="og:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
-        <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png" />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={logo} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://thedcevents.com/" />
-        <meta property="twitter:title" content="DC Events" />
-        <meta property="twitter:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
-        <meta property="twitter:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png" />
+        <meta property="twitter:url" content={url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={desc} />
+        <meta property="twitter:image" content={logo} />
       </Head>
       <div className="App">
         <div className="App-hc">
@@ -73,7 +79,7 @@ function App() {
           <header className={"App-header" + (showMenu ? ' open' : '')}>
             <div className="lead">
               <div className="wttl">
-                <Link to="/">DC Events</Link>
+                <Link to="/">{title}</Link>
               </div>
             </div>
             <div className="ham">
@@ -88,7 +94,7 @@ function App() {
         </div>
         <div className="flt-btn">
           <div className="social">
-              <a href="https://wa.me/919526696669" className="wa">
+              <a href={'https://wa.me/91' + phone} className="wa">
                 <div></div>
               </a>
             </div>

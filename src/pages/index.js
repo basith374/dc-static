@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'components/Router'
 import { Head } from 'react-static';
 import { loadJS } from '../App';
+import { title, phone } from '../App';
 
 export default () => {
   useEffect(() => {
@@ -24,7 +25,7 @@ export default () => {
   }
   return <div className="Home">
     <Head>
-      <title>DC Events</title>
+      <title>{title}</title>
     </Head>
     <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>
@@ -107,16 +108,13 @@ export default () => {
         <div className="f-r">
           <div className="hd">Contact</div>
           <div>
-            <a href="tel:+919526696669">9526696669</a>
+            <a href={'tel:+91' + phone}>{phone}</a>
           </div>
           <div>
             <a href="mailto:dcevents@gmail.com">dcevents@gmail.com</a>
           </div>
           <div className="social">
             <a href="https://www.facebook.com/DC-events-340798790145828/" className="fb">
-              <div></div>
-            </a>
-            <a href="https://wa.me/919526696669" className="wa">
               <div></div>
             </a>
             <a href="https://www.instagram.com/dc_eventz/" className="in">
