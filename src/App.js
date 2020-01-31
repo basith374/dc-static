@@ -29,8 +29,8 @@ const structuredJSON = JSON.stringify({
   "@type": "ProfessionalService",
   "name": "DC Events",
   "url": "https://thedcevents.com",
-  "logo": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_black.png",
-  "image": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_black.png",
+  "logo": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png",
+  "image": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Payyannur",
@@ -59,13 +59,13 @@ function App() {
         <meta property="og:url" content="https://thedcevents.com/" />
         <meta property="og:title" content="DC Events" />
         <meta property="og:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
-        <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_black.png" />
+        <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://thedcevents.com/" />
         <meta property="twitter:title" content="DC Events" />
         <meta property="twitter:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
-        <meta property="twitter:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_black.png" />
+        <meta property="twitter:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png" />
       </Head>
       <div className="App">
         <div className="App-hc">
