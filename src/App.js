@@ -53,8 +53,19 @@ function App() {
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
         <meta name="description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate &amp; college events." />
         <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
-        <meta name="image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png" />
         <script type='application/ld+json'>{structuredJSON}</script>
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thedcevents.com/" />
+        <meta property="og:title" content="DC Events" />
+        <meta property="og:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
+        <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://thedcevents.com/" />
+        <meta property="twitter:title" content="DC Events" />
+        <meta property="twitter:description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events." />
+        <meta property="twitter:image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png" />
       </Head>
       <div className="App">
         <div className="App-hc">
