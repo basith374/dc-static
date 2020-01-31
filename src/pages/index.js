@@ -25,7 +25,6 @@ export default () => {
   return <div className="Home">
     <Head>
       <title>DC Events</title>
-      <meta></meta>
     </Head>
     <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>

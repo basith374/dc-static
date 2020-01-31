@@ -24,6 +24,24 @@ export function loadJS() {
   document.head.appendChild(link);
 }
 
+const structuredJSON = JSON.stringify({
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "DC Events",
+  "url": "https://thedcevents.com",
+  "logo": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png",
+  "image": "https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Payyannur",
+    "addressRegion": "Kerala, Kannur",
+    "postalCode": "670307",
+    "addressCountry": "India"
+  },
+  "telephone": "+919526696669",
+  "priceRange": "$"
+})
+
 function App() {
   let [showMenu, setShowMenu] = useState(false);
   let toggleMenu = e => {
@@ -35,6 +53,8 @@ function App() {
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
         <meta name="description" content="DC Events is an event management located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate &amp; college events." />
         <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
+        <meta name="image" content="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png" />
+        <script type='application/ld+json'>{structuredJSON}</script>
       </Head>
       <div className="App">
         <div className="App-hc">
