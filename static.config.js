@@ -34,5 +34,9 @@ export default {
     ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
+    [
+      'react-static-plugin-google-tag-manager',
+      { id: 'UA-80054129-8' }
+    ]
   ],
 }
