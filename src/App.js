@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Root, Routes, Head } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
@@ -34,10 +34,14 @@ function App() {
   let toggleMenu = e => {
     setShowMenu(!showMenu);
   }
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [['js', new Date()], ['config', 'UA-80054129-8']];
+  }, []);
   return (
     <Root>
       <Head>
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80054129-8"></script>
       </Head>
       <div className="App">
         <div className="App-hc">
