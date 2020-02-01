@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Root, Routes, Head } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
-
-import places from './places.json';
 
 import './app.css'
 
@@ -23,41 +21,7 @@ export function loadJS() {
 }
 
 export const title = 'DC Events';
-const url = 'https://thedcevents.com';
-export const logo = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png';
-const desc = 'DC Events is an event management company located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events.'
 export const phone = '9526696669';
-
-const structuredJSON = JSON.stringify({
-  "@context": "http://www.schema.org",
-  "@type": "ProfessionalService",
-  "name": title,
-  "url": url,
-  "logo": logo,
-  "image": logo,
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Payyannur",
-    "addressRegion": "Kerala, Kannur",
-    "postalCode": "670307",
-    "addressCountry": "India"
-  },
-  "telephone": '+91' + phone,
-  "priceRange": "$",
-  "areaServed": places.map(p => ({
-    "@type": "Place",
-    "name": p.name
-  })),
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Payyannur"
-  },
-  "founder": {
-    "@type": "Person",
-    "name": "Anuprasad",
-    "sameAs": "https://www.facebook.com/ramu.prasad.921"
-  }
-})
 
 function Loading() {
   return <div className="emp">
@@ -70,25 +34,14 @@ function App() {
   let toggleMenu = e => {
     setShowMenu(!showMenu);
   }
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [['js', new Date()], ['config', 'UA-80054129-8']];
+  }, []);
   return (
     <Root>
       <Head>
         <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/favicon.png" />
-        <meta name="description" content={desc} />
-        <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
-        <script type='application/ld+json'>{structuredJSON}</script>
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc} />
-        <meta property="og:image" content={logo} />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={url} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={desc} />
-        <meta property="twitter:image" content={logo} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80054129-8"></script>
       </Head>
       <div className="App">
         <div className="App-hc">

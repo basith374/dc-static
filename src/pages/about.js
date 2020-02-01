@@ -5,9 +5,11 @@ export default () => (
   <div className="About">
     <Head>
         <title>About us</title>
+        <meta name="keywords" content="kalyana,mandapa,catering,food,biriyani,south,indian,decoration,lights,music,stage,balloon,panthal,tent,bridal,makeover" />
+        <meta name="description" content="We are a professional service company here to help you plan &amp; undertake your public/private events." />
     </Head>
-    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
-    <div>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
-    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+    <h1>About DC Events</h1>
+    <div>Founded in Payyannur, we are a professional service provider mainly focused in event management &amp; coordination. We oversee/undertake events from Birthday parties to Corporate events to College Events. We take care of all your requirements like food &amp; catering, music, lights, stage setup, balloons, tenting, kalyana mandapa decor, bridal makeover, costumes.</div>
+    <div>Relax while we do all the work, planning &amp; undertaking of your public/private events. You can now lay back &amp; have the seamless experience delivered at your convenience.</div>
   </div>
 )

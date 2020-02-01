@@ -14,10 +14,45 @@ function Card(props) {
   let event = events[props.name];
   return <Link to={event.slug}>
     <div className="plc" style={image(event.img)}>
-      <div>{event.name}</div>
+      <h1>{event.name}</h1>
     </div>
   </Link>
 }
+
+const logo = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png';
+const url = 'https://thedcevents.com';
+const desc = 'DC Events is an event management company located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events.'
+
+const structuredJSON = JSON.stringify({
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": title,
+  "url": url,
+  "logo": logo,
+  "image": logo,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Payyannur",
+    "addressRegion": "Kerala, Kannur",
+    "postalCode": "670307",
+    "addressCountry": "India"
+  },
+  "telephone": '+91' + phone,
+  "priceRange": "$",
+  "areaServed": places.map(p => ({
+    "@type": "Place",
+    "name": p.name
+  })),
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Payyannur"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Anuprasad",
+    "sameAs": "https://www.facebook.com/ramu.prasad.921"
+  }
+})
 
 export default () => {
   useEffect(() => {
@@ -37,7 +72,22 @@ export default () => {
   }, [])
   return <div className="Home">
     <Head>
-      <title>{title}</title>
+      <title>DC Events - Event Management Company in Payyanur, Kannur</title>
+      <meta name="description" content={desc} />
+      <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
+      <script type='application/ld+json'>{structuredJSON}</script>
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={desc} />
+      <meta property="og:image" content={logo} />
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={desc} />
+      <meta property="twitter:image" content={logo} />
     </Head>
     <div className="landing" style={image('event.jpeg')}>
       <Link to="/contact">HOST AN EVENT</Link>

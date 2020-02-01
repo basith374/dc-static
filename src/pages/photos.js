@@ -10,6 +10,8 @@ export default () => {
         <div className="Photos">
             <Head>
                 <title>Photos</title>
+                <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
+                <meta name="description" content="" />
             </Head>
             <div className="phr">
                 {[...Array(18).keys()].map(f => {

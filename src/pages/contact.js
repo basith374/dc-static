@@ -15,6 +15,8 @@ export default () => {
         <form className="Contact" name="contact" action="/thank-you" method="POST" data-netlify="true">
             <Head>
                 <title>Contact us</title>
+                <meta name="keywords" content="kalyana,mandapa,catering,service,provider,decoration,lights,music,stage,balloon,panthal,tent" />
+                <meta name="description" content="" />
             </Head>
             <div className="opt">
                 <div>What kind of event? <span>*</span></div>

@@ -116,8 +116,8 @@ button {
   display: block;
   width: 100%;
 }
-.Home .pdc div,
-.Home .plc div {
+.Home .pdc h1,
+.Home .plc h1 {
   display: inline-block;
   background: rgba(0,0,0,.8);
   color: #fff;
@@ -125,6 +125,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
 }
 .Home .ttl {
   text-align: center;
