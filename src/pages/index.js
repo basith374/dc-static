@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'components/Router'
 import { Head } from 'react-static';
-import { loadJS } from '../App';
 import { title, phone } from '../App';
 import places from '../places.json';
 import events from '../events.json';
@@ -55,21 +54,6 @@ const structuredJSON = JSON.stringify({
 })
 
 export default () => {
-  useEffect(() => {
-    loadJS();
-    setTimeout(() => {
-      document.getElementById('map').innerHTML = '';
-      let map = window.L.map('map', {scrollWheelZoom: false, dragging: false}).setView([12.104083, 75.203500], 14);
-      window.L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        accessToken: 'pk.eyJ1IjoiYmFzaXRoa3VuaW1hbCIsImEiOiJjaXJvdTNsaGIwZDR2ZmFtNnlzcnhzYmxtIn0.ycqG1O0DhIMfKcsLacSbeg'
-      }).addTo(map);
-      window.L.marker([12.104083, 75.203500]).addTo(map)
-          .bindPopup('DC Events Office Payyanur.')
-    }, 1000)
-  }, [])
   return <div className="Home">
     <Head>
       <title>DC Events - Event Management Company in Payyanur, Kannur</title>
@@ -116,7 +100,9 @@ export default () => {
         <Card name="catering" />
       </div>
     </div>
-    <div id="map"></div>
+    <div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1002592174123!2d75.20194201521159!3d12.105288491428334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba46d3e7740be93%3A0x7ef5049d4823174e!2sDC%20events!5e0!3m2!1sen!2sin!4v1580591762589!5m2!1sen!2sin" width="100%" height="100%" frameBorder="0" style={{border: 0}} allowFullScreen=""></iframe>
+    </div>
     <div className="footer">
       <div className="footer-in">
         <div className="f-l">
