@@ -1,0 +1,66 @@
+{
+    "birthday": {
+        "slug": "/birthday-celebrations",
+        "img": "birthday.jpg",
+        "tags": "birthday event organisers thalassery",
+        "name": "Birthday Celebrations"
+    },
+    "wedding": {
+        "slug": "/weddings",
+        "img": "wedding.jpg",
+        "tags": "wedding organizer payyannur",
+        "name": "Weddings"
+    },
+    "corporate": {
+        "slug": "/corporate-events",
+        "img": "corporate.jpg",
+        "tags": "corporate event managers kannur",
+        "name": "Corporate Events"
+    },
+    "college": {
+        "slug": "/college-events",
+        "img": "college.jpg",
+        "tags": "college events taliparamba",
+        "name": "College Events"
+    },
+    "mandapam": {
+        "slug": "/mandapam",
+        "img": "mandapa.jpg",
+        "tags": "kalyana mandapa setup payyannur",
+        "name": "Mandapam"
+    },
+    "costumes": {
+        "slug": "/costumes",
+        "img": "costume.jpg",
+        "tags": "costume rental payyannur",
+        "name": "Costumes"
+    },
+    "lights": {
+        "slug": "/lights",
+        "img": "lights.jpeg",
+        "tags": "lights & stage setup kannur",
+        "name": "Lights"
+    },
+    "music": {
+        "slug": "/music",
+        "img": "music.jpg",
+        "tags": "music & dj hire thalassery",
+        "name": "Music & DJ"
+    },
+    "decor": {
+        "slug": "/decor",
+        "img": "decoration.jpg",
+        "tags": "function decoration experts",
+        "name": "Decor"
+    },
+    "catering": {
+        "slug": "/catering",
+        "img": "catering.jpg",
+        "tags": "catering & food payyannur",
+        "name": "Catering"
+    },
+    "events": {
+        "img": "event.jpeg",
+        "tags": "event management"
+    }
+}

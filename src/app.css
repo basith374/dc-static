@@ -310,3 +310,9 @@ button {
     margin: 0 auto;
   }
 }
+.emp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}

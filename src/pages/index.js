@@ -3,6 +3,21 @@ import { Link } from 'components/Router'
 import { Head } from 'react-static';
 import { loadJS } from '../App';
 import { title, phone } from '../App';
+import places from '../places.json';
+import events from '../events.json';
+
+function image(path) {
+  return {backgroundImage: 'url(\'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/' + path + '\')'};
+}
+
+function Card(props) {
+  let event = events[props.name];
+  return <Link to={event.slug}>
+    <div className="plc" style={image(event.img)}>
+      <div>{event.name}</div>
+    </div>
+  </Link>
+}
 
 export default () => {
   useEffect(() => {
@@ -20,9 +35,6 @@ export default () => {
           .bindPopup('DC Events Office Payyanur.')
     }, 1000)
   }, [])
-  let image = (path) => {
-    return {backgroundImage: 'url(\'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/' + path + '\')'};
-  }
   return <div className="Home">
     <Head>
       <title>{title}</title>
@@ -33,65 +45,25 @@ export default () => {
     <div className="events">
       <div className="ttl">Events</div>
       <div className="plr">
-        <Link to="/birthday-celebrations">
-          <div className="plc" style={image('birthday.jpg')}>
-            <div>Birthday Celebrations</div>
-          </div>
-        </Link>
-        <Link to="/weddings">
-          <div className="plc" style={image('wedding.jpg')}>
-            <div>Weddings</div>
-          </div>
-        </Link>
-        <Link to="/corporate-events">
-          <div className="plc" style={image('corporate.jpg')}>
-            <div>Corporate Events</div>
-          </div>
-        </Link>
+        <Card name="birthday" />
+        <Card name="wedding" />
+        <Card name="corporate" />
       </div>
       <div className="plr">
-        <Link to="/college-events">
-          <div className="plc" style={image('college.jpg')}>
-            <div>College Events</div>
-          </div>
-        </Link>
+        <Card name="college" />
       </div>
     </div>
     <div className="services">
       <div className="ttl">Services</div>
       <div className="plr">
-        <Link to="/mandapam">
-          <div className="pdc" style={image('mandapa.jpg')}>
-            <div>Mandapam</div>
-          </div>
-        </Link>
-        <Link to="/costumes">
-          <div className="pdc" style={image('costume.jpg')}>
-            <div>Costumes</div>
-          </div>
-        </Link>
-        <Link to="/lights">
-          <div className="pdc" style={image('lights.jpeg')}>
-            <div>Lights</div>
-          </div>
-        </Link>
+        <Card name="mandapam" />
+        <Card name="costumes" />
+        <Card name="lights" />
       </div>
       <div className="plr">
-        <Link to="/music">
-          <div className="pdc" style={image('music.jpg')}>
-            <div>Music &amp; DJ</div>
-          </div>
-        </Link>
-        <Link to="/decor">
-          <div className="pdc" style={image('decoration.jpg')}>
-            <div>Decor</div>
-          </div>
-        </Link>
-        <Link to="/catering">
-          <div className="pdc" style={image('catering.jpg')}>
-            <div>Catering</div>
-          </div>
-        </Link>
+        <Card name="music" />
+        <Card name="decor" />
+        <Card name="catering" />
       </div>
     </div>
     <div id="map"></div>
@@ -99,11 +71,10 @@ export default () => {
       <div className="footer-in">
         <div className="f-l">
           <div className="hd">Locations served</div>
-          <div><Link to="/find/event-managers-in-payyannur">Payyannur</Link></div>
-          <div><Link to="/find/event-managers-in-taliparamba">Taliparamba</Link></div>
-          <div><Link to="/find/event-managers-in-kannur">Kannur</Link></div>
-          <div><Link to="/find/event-managers-in-thalassery">Thalassery</Link></div>
-          <div><Link to="/find/event-managers-in-mahe">Mahe</Link></div>
+          {places.filter(p => p.home).map(p => {
+            let name = p.name;
+            return <div key={p.name}><Link to={'/find/event-managers-in-' + name.toLowerCase()}>{name}</Link></div>
+          })}
         </div>
         <div className="f-r">
           <div className="hd">Contact</div>

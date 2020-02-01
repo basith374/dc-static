@@ -1,26 +1,28 @@
 import path from 'path'
-import axios from 'axios'
+import places from './src/places.json';
+import events from './src/events.json';
 
 export default {
   getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
-
     return [
       {
-        path: '/blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          template: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+        path: '/thank-you',
+        noindex: true
       },
+      ...places.map(place => ({
+        path: '/find/event-managers-in-' + place.name.toLowerCase().replace(/\s/, '-'),
+        template: 'src/containers/Place',
+        getData: () => ({
+          place
+        })
+      })),
+      ...Object.values(events).filter(e => e.name).map(event => ({
+        path: event.slug,
+        template: 'src/containers/Event',
+        getData: () => ({
+          event
+        })
+      }))
     ]
   },
   plugins: [

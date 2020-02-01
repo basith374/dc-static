@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Root, Routes, addPrefetchExcludes, Head } from 'react-static'
+import React, { useState } from 'react'
+import { Root, Routes, Head } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
-import Dynamic from 'containers/Dynamic'
+
+import places from './places.json';
 
 import './app.css'
-
-// Any routes that start with 'dynamic' will be treated as non-static routes
-addPrefetchExcludes(['dynamic'])
 
 export function loadJS() {
   let ref = window.document.getElementsByTagName("script")[0];
@@ -46,252 +44,10 @@ const structuredJSON = JSON.stringify({
   },
   "telephone": '+91' + phone,
   "priceRange": "$",
-  "areaServed": [
-    {
-      "@type": "Place",
-      "name": "Payyanur"
-    },
-    {
-      "@type": "Place",
-      "name": "Taliparamba"
-    },
-    {
-      "@type": "Place",
-      "name": "Mahe"
-    },
-    {
-      "@type": "Place",
-      "name": "Thalassery"
-    },
-    {
-      "@type": "Place",
-      "name": "Kuthuparamba"
-    },
-    {
-      "@type": "Place",
-      "name": "Iritty"
-    },
-    {
-      "@type": "Place",
-      "name": "Edakkad"
-    },
-    {
-      "@type": "Place",
-      "name": "Dharmadam"
-    },
-    {
-      "@type": "Place",
-      "name": "Dharmashala"
-    },
-    {
-      "@type": "Place",
-      "name": "Mattannur"
-    },
-    {
-      "@type": "Place",
-      "name": "Puthiyatheru"
-    },
-    {
-      "@type": "Place",
-      "name": "Chakkarakkal"
-    },
-    {
-      "@type": "Place",
-      "name": "Pilathara"
-    },
-    {
-      "@type": "Place",
-      "name": "Parassinikadavu"
-    },
-    {
-      "@type": "Place",
-      "name": "Mayyil"
-    },
-    {
-      "@type": "Place",
-      "name": "Azhikode"
-    },
-    {
-      "@type": "Place",
-      "name": "Sreekandapuram"
-    },
-    {
-      "@type": "Place",
-      "name": "Pazhayangadi"
-    },
-    {
-      "@type": "Place",
-      "name": "Irikkur"
-    },
-    {
-      "@type": "Place",
-      "name": "Cherupuzha"
-    },
-    {
-      "@type": "Place",
-      "name": "Anjarakkandy"
-    },
-    {
-      "@type": "Place",
-      "name": "Mambaram"
-    },
-    {
-      "@type": "Place",
-      "name": "Eachur"
-    },
-    {
-      "@type": "Place",
-      "name": "Chalode"
-    },
-    {
-      "@type": "Place",
-      "name": "Pinarayi"
-    },
-    {
-      "@type": "Place",
-      "name": "Panoor"
-    },
-    {
-      "@type": "Place",
-      "name": "Kanhangad"
-    },
-    {
-      "@type": "Place",
-      "name": "Nileshwaram"
-    },
-    {
-      "@type": "Place",
-      "name": "Cheruvathur"
-    },
-    {
-      "@type": "Place",
-      "name": "Pappinisseri"
-    },
-    {
-      "@type": "Place",
-      "name": "Valapattanam"
-    },
-    {
-      "@type": "Place",
-      "name": "Mele Chovva"
-    },
-    {
-      "@type": "Place",
-      "name": "Thazhe Chovva"
-    },
-    {
-      "@type": "Place",
-      "name": "Thottada"
-    },
-    {
-      "@type": "Place",
-      "name": "Thana"
-    },
-    {
-      "@type": "Place",
-      "name": "Payyambalam"
-    },
-    {
-      "@type": "Place",
-      "name": "Kakkad"
-    },
-    {
-      "@type": "Place",
-      "name": "Chalad"
-    },
-    {
-      "@type": "Place",
-      "name": "Kannadiparamba"
-    },
-    {
-      "@type": "Place",
-      "name": "Kambil"
-    },
-    {
-      "@type": "Place",
-      "name": "Kannur City"
-    },
-    {
-      "@type": "Place",
-      "name": "Thavakkara"
-    },
-    {
-      "@type": "Place",
-      "name": "Vellur"
-    },
-    {
-      "@type": "Place",
-      "name": "Thrikaripur"
-    },
-    {
-      "@type": "Place",
-      "name": "Peravoor"
-    },
-    {
-      "@type": "Place",
-      "name": "Nedumpoil"
-    },
-    {
-      "@type": "Place",
-      "name": "Kadirur"
-    },
-    {
-      "@type": "Place",
-      "name": "Peringathur"
-    },
-    {
-      "@type": "Place",
-      "name": "Uruvachal"
-    },
-    {
-      "@type": "Place",
-      "name": "Pariyaram"
-    },
-    {
-      "@type": "Place",
-      "name": "Varam"
-    },
-    {
-      "@type": "Place",
-      "name": "Chokli"
-    },
-    {
-      "@type": "Place",
-      "name": "Matool"
-    },
-    {
-      "@type": "Place",
-      "name": "Ponniam"
-    },
-    {
-      "@type": "Place",
-      "name": "Kannapuram"
-    },
-    {
-      "@type": "Place",
-      "name": "Chavassery"
-    },
-    {
-      "@type": "Place",
-      "name": "Madayi"
-    },
-    {
-      "@type": "Place",
-      "name": "Padannakkad"
-    },
-    {
-      "@type": "Place",
-      "name": "Cheemeni"
-    },
-    {
-      "@type": "Place",
-      "name": "Karivellur"
-    },
-    {
-      "@type": "Place",
-      "name": "Ezhimala"
-    }
-  ],
+  "areaServed": places.map(p => ({
+    "@type": "Place",
+    "name": p.name
+  })),
   "foundingLocation": {
     "@type": "Place",
     "name": "Payyannur"
@@ -302,6 +58,12 @@ const structuredJSON = JSON.stringify({
     "sameAs": "https://www.facebook.com/ramu.prasad.921"
   }
 })
+
+function Loading() {
+  return <div className="emp">
+    <div>Loading...</div>
+  </div>
+}
 
 function App() {
   let [showMenu, setShowMenu] = useState(false);
@@ -354,9 +116,8 @@ function App() {
               </a>
             </div>
         </div>
-        <React.Suspense fallback={<em>Loading...</em>}>
+        <React.Suspense fallback={<Loading />}>
           <Router>
-            <Dynamic path="dynamic" />
             <Routes path="*" />
           </Router>
         </React.Suspense>
