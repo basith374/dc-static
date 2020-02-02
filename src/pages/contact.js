@@ -14,8 +14,10 @@ let items = [
 export default () => {
     let [event, setEvent] = useState('');
     let [err, setErr] = useState({});
+    let [busy, setBusy] = useState(false);
     let onSubmit = e => {
         e.preventDefault();
+        if(busy) return;
         let captcha = grecaptcha.getResponse();
         let invalid = {};
         let name = document.querySelector('[name=name]').value;
@@ -24,22 +26,21 @@ export default () => {
         if(!name) invalid['name'] = true;
         if(!event) invalid['event'] = true;
         if(!mobileno) invalid['mobileno'] = true;
-        // if(!captcha) invalid['captcha'] = true;
+        if(!captcha) invalid['captcha'] = true;
         if(Object.keys(invalid).length) return setErr(invalid);
-        axios.post('https://57x5v1zxqh.execute-api.ap-south-1.amazonaws.com/default/dcContact', {
+        setBusy(true);
+        axios.post('https://922p817owk.execute-api.ap-south-1.amazonaws.com/default/testing', {
             event,
             name,
             mobileno,
             comments,
             captcha,
-            id: new Date().toString()
         }).then(rsp => {
-            console.log(rsp.data)
-            // window.location.replace('/thank-you');
+            window.location.replace('/thank-you');
         });
     }
     return (
-        <form className="Contact" action="/thank-you" method="POST" onSubmit={onSubmit}>
+        <div className="Contact">
             <Head>
                 <title>Contact us</title>
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -71,13 +72,13 @@ export default () => {
             <div className="inp">
                 <textarea name="comments" placeholder="Any comments or ideas about your event?" rows="10"></textarea>
             </div>
-            {'captcha' in err && <div className="inp err">Captcha error</div>}
+            {'captcha' in err && <div className="inp err">Check the box below</div>}
             <div className="inp">
                 <div className="g-recaptcha" data-sitekey="6Ldw4dQUAAAAAKHCuT4pMmrOONMNnCn2JKQ8eCoG"></div>
             </div>
             <div>
-                <button className="cob" type="submit">SUBMIT</button>
+                <button className={'cob' + (busy ? ' disable' : '')} onClick={onSubmit}>SUBMIT</button>
             </div>
-        </form>
+        </div>
     )
 }
