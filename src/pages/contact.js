@@ -62,7 +62,7 @@ export default () => {
             </div>
             <div className={'inp' + ('mobileno' in err ? ' err' : '')}>Contact <span>*</span></div>
             <div className="inp">
-                <input type="text" placeholder="Mobile no" name="mobileno" />
+                <input type="number" placeholder="Mobile no" name="mobileno" />
             </div>
             <div className={'inp' + ('name' in err ? ' err' : '')}>Name <span>*</span></div>
             <div className="inp">
