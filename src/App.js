@@ -19,6 +19,7 @@ function App() {
   let toggleMenu = e => {
     setShowMenu(!showMenu);
   }
+  let hideMenu = e => setShowMenu(false);
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -37,16 +38,16 @@ function App() {
           <header className={"App-header" + (showMenu ? ' open' : '')}>
             <div className="lead">
               <div className="wttl">
-                <Link to="/" onClick={toggleMenu}>{title}</Link>
+                <Link to="/" onClick={hideMenu}>{title}</Link>
               </div>
             </div>
             <div className="ham">
               <button onClick={toggleMenu}><img src={require('menu.svg')} width="32" /></button>
             </div>
             <div className="trail">
-              <Link to="/contact" onClick={toggleMenu}>Contact</Link>
-              <Link to="/photos" onClick={toggleMenu}>Photos</Link>
-              <Link to="/about" onClick={toggleMenu}>About</Link>
+              <Link to="/contact" onClick={hideMenu}>Contact</Link>
+              <Link to="/photos" onClick={hideMenu}>Photos</Link>
+              <Link to="/about" onClick={hideMenu}>About</Link>
             </div>
           </header>
         </div>
