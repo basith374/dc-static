@@ -318,3 +318,6 @@ button {
   align-items: center;
   height: 300px;
 }
+.err {
+  color: #e74c3c;
+}
