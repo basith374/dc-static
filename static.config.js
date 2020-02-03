@@ -1,6 +1,5 @@
 import path from 'path'
-import places from './src/places.json';
-import events from './src/events.json';
+import { getPlaces, getEvents } from './src/common.js';
 
 export default {
   siteRoot: 'https://thedcevents.com',
@@ -10,14 +9,14 @@ export default {
         path: '/thank-you',
         noindex: true
       },
-      ...places.map(place => ({
+      ...getPlaces().map(place => ({
         path: '/find/event-managers-in-' + place.name.toLowerCase().replace(/\s/, '-'),
         template: 'src/containers/Place',
         getData: () => ({
           place
         })
       })),
-      ...Object.values(events).filter(e => e.name).map(event => ({
+      ...getEvents('routes').map(event => ({
         path: event.slug,
         template: 'src/containers/Event',
         getData: () => ({

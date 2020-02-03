@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from '../containers/Image';
 import { Head } from 'react-static';
-import events from '../events.json'
-
-let photos = Object.values(events);
+import { getEvents } from '../common';
 
 export default () => {
+    let photos = getEvents('photos');
     return (
         <div className="Photos">
             <Head>

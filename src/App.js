@@ -5,8 +5,7 @@ import { Link, Router } from 'components/Router'
 
 import './app.css'
 
-export const title = 'DC Events';
-export const phone = '9526696669';
+import { title, phone } from './common';
 
 function Loading() {
   return <div className="emp">

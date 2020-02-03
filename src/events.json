@@ -62,5 +62,18 @@
     "events": {
         "img": "event.jpeg",
         "tags": "event management"
+    },
+    "anniversary": {
+        "slug": "/anniversaries",
+        "name": "Anniversaries"
+    },
+    "exhibition": {
+        "slug": "/exhibition"
+    },
+    "conference": {
+        "slug": "/conference"
+    },
+    "meetings": {
+        "slug": "/meetings"
     }
 }

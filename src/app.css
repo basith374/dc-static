@@ -326,3 +326,12 @@ button {
 .cob.disable {
   opacity: .5;
 }
+.plinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+.plinks a {
+  width: 33.33%;
+  padding: 10px;
+  display: inline-block;
+}
