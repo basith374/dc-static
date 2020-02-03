@@ -3,6 +3,7 @@ import places from './src/places.json';
 import events from './src/events.json';
 
 export default {
+  siteRoot: 'https://thedcevents.com',
   getRoutes: async () => {
     return [
       {
