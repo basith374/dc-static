@@ -46,6 +46,7 @@ const structuredJSON = JSON.stringify({
     "@type": "Place",
     "name": "Payyannur"
   },
+  "foundingDate": "2019-06-18",
   "founder": {
     "@type": "Person",
     "name": "Anuprasad",
