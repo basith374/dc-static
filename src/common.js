@@ -68,9 +68,7 @@ export const jsonLD = {
         "name": "Anuprasad",
         "sameAs": "https://www.facebook.com/ramu.prasad.921"
     },
-    ...getSocial('link').map(f => ({
-        "sameAs": f.url
-    }))
+    "sameAs": getSocial('link').map(f => f.url)
 }
 
 export const backgroundImage = (path) => {
