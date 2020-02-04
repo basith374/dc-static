@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Root, Routes, Head } from 'react-static'
 //
-import { Link, Router } from 'components/Router'
+import { Router } from 'components/Router'
 
 import './app.css'
 
-import { title, phone } from './common';
+import { phone } from './common';
 
 function Loading() {
   return <div className="emp">
@@ -14,11 +14,6 @@ function Loading() {
 }
 
 function App() {
-  let [showMenu, setShowMenu] = useState(false);
-  let toggleMenu = e => {
-    setShowMenu(!showMenu);
-  }
-  let hideMenu = e => setShowMenu(false);
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -32,24 +27,6 @@ function App() {
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80054129-8"></script>
       </Head>
       <div className="App">
-        <div className="App-hc">
-          <div className="stripes"></div>
-          <header className={"App-header" + (showMenu ? ' open' : '')}>
-            <div className="lead">
-              <div className="wttl">
-                <Link to="/" onClick={hideMenu}>{title}</Link>
-              </div>
-            </div>
-            <div className="ham">
-              <button onClick={toggleMenu}><img src={require('menu.svg')} width="32" /></button>
-            </div>
-            <div className="trail">
-              <Link to="/contact" onClick={hideMenu}>Contact</Link>
-              <Link to="/photos" onClick={hideMenu}>Photos</Link>
-              <Link to="/about" onClick={hideMenu}>About</Link>
-            </div>
-          </header>
-        </div>
         <div className="flt-btn">
           <div className="social">
               <a href={'https://wa.me/91' + phone} className="wa">

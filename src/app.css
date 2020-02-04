@@ -31,6 +31,8 @@ button {
 .App-header {
   margin: 0 auto;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .App-header a {
   padding: 2rem;
@@ -47,7 +49,7 @@ button {
   display: flex;
   line-height: 25px;
 }
-.App-header .ham img {
+.h-c:not(.h-l) .App-header .ham img {
   filter: invert(100%);
 }
 .App-header .ham button {
@@ -69,7 +71,7 @@ button {
   padding: 1.5rem;
 }
 .App-hc .stripes {
-  height: 6px;
+  height: 2px;
   background-image: url(https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/stripes.png);
 }
 
@@ -258,6 +260,36 @@ button {
   margin-left: 50%;
   transform: translate(-50%, 0);
 }
+.h-l {
+  background: #000;
+  position: relative;
+  height: 230px;
+}
+.h-l .logo {
+  width: 190px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.h-l .App-header .trail a {
+  color: #aaa;
+}
+.h-l .App-header .trail a:hover {
+  color: #fff;
+}
+.mlm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.mlm h1 {
+  color: #fff;
+}
 @media only screen and (min-width: 400px) {
   .Photos .phd {
     width: 50%;
@@ -287,6 +319,15 @@ button {
   }
   .App-header .ham {
     display: none;
+  }
+  .mlm {
+    display: flex;
+  }
+  .h-l {
+    height: 300px;
+  }
+  .App-header .ham img {
+    filter: invert(100%);
   }
 }
 @media only screen and (min-width: 800px) {
