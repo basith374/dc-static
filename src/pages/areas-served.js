@@ -6,7 +6,7 @@ import { Link } from 'components/Router'
 export default () => (
   <div className="About">
     <Head>
-        <title>About us</title>
+        <title>Areas served</title>
         <meta name="keywords" content="kalyana,mandapa,catering,food,biriyani,south,indian,decoration,lights,music,stage,balloon,panthal,tent,bridal,makeover" />
         <meta name="description" content="We are a professional service company here to help you plan &amp; undertake your public/private events." />
     </Head>
