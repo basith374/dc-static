@@ -4,7 +4,7 @@ import social from './social.json';
 
 export const title = 'DC Events';
 export const phone = '9526696669';
-export const email = 'dcevents@gmail.com';
+export const email = 'thedcevents@gmail.com';
 export const logo = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png';
 export const logo_foot = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png';
 export const url = 'https://thedcevents.com';
