@@ -102,9 +102,6 @@ button {
   padding: 1rem;
   color: #fff;
 }
-.Home .plr {
-  margin-bottom: 1rem;
-}
 .Home .pdc,
 .Home .plc {
   flex: 1;
@@ -114,6 +111,7 @@ button {
   justify-content: center;
   background-size: cover;
   background-position: center;
+  margin-bottom: 10px;
 }
 .plr a {
   display: block;
@@ -291,14 +289,18 @@ button {
   color: #fff;
 }
 @media only screen and (min-width: 400px) {
-  .Photos .phd {
-    width: 50%;
-  }
   .Photos .phd img {
     width: auto;
   }
+  .Home .pdc,
+  .Home .plc {
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (min-width: 600px) {
+  .Photos .phd {
+    width: 50%;
+  }
   .Contact {
     width: 600px;
   }
@@ -331,9 +333,6 @@ button {
   }
 }
 @media only screen and (min-width: 800px) {
-  .Photos .phd {
-    width: 33.33%;
-  }
   .Home .footer-in {
     display: flex;
     width: 800px;
@@ -342,10 +341,12 @@ button {
     margin: 0;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .Photos .phd {
-    width: 25%;
+    width: 33.33%;
   }
+}
+@media only screen and (min-width: 1200px) {
   .Home .services {
     width: 1200px;
     margin: 0 auto 6rem;
@@ -353,6 +354,11 @@ button {
   .Home .events {
     width: 1200px;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .Photos .phd {
+    width: 25%;
   }
 }
 .emp {
