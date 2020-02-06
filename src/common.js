@@ -68,7 +68,14 @@ export const jsonLD = {
         "name": "Anuprasad",
         "sameAs": "https://www.facebook.com/ramu.prasad.921"
     },
-    "sameAs": getSocial('link').map(f => f.url)
+    "sameAs": getSocial('link').map(f => f.url),
+    "hasMap": {
+        "@type": "Map",
+        "mapType": {
+            "@id": "http://schema.org/VenueMap"
+        },
+        "url":  "https://goo.gl/maps/LdTFw619STLyzQnc6"
+    }
 }
 
 export const backgroundImage = (path) => {
