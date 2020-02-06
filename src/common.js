@@ -89,7 +89,18 @@ export const jsonLD = {
             "@id": "http://schema.org/VenueMap"
         },
         "url":  "https://goo.gl/maps/LdTFw619STLyzQnc6"
-    }
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Event Management Services",
+        "itemListElement": Object.values(events).filter(e => e.name).map(e => ({
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": e.name
+            }
+        })),
+    },
 }
 
 export const backgroundImage = (path) => {
