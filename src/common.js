@@ -54,10 +54,24 @@ export const jsonLD = {
     "telephone": '+91' + phone,
     "email": email,
     "priceRange": "$",
-    "areaServed": places.map(p => ({
-        "@type": "Place",
-        "name": p.name
-    })),
+    "areaServed": places.map(p => {
+        let place = {
+            "@type": "Place",
+            "name": p.name,
+        }
+        if(p.geo) {
+            place.geo = {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": p.geo.lat,
+                    "longitude": p.geo.lng
+                },
+                "geoRadius": p.geo.radius
+            }
+        }
+        return place;
+    }),
     "foundingLocation": {
         "@type": "Place",
         "name": "Payyannur"

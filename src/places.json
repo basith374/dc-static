@@ -5,7 +5,12 @@
     },
     {
       "name": "Payyanur",
-      "home": true
+      "home": true,
+      "geo": {
+        "lat": "12.972442",
+        "lng": "77.580643",
+        "radius": "10"
+      }
     },
     {
       "name": "Taliparamba",
