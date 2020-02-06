@@ -68,12 +68,15 @@
         "name": "Anniversaries"
     },
     "exhibition": {
-        "slug": "/exhibition"
+        "slug": "/exhibition",
+        "name": "Exhibition"
     },
     "conference": {
-        "slug": "/conference"
+        "slug": "/conference",
+        "name": "Conference"
     },
     "meetings": {
-        "slug": "/meetings"
+        "slug": "/meetings",
+        "name": "Meetings"
     }
 }
