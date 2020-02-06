@@ -8,7 +8,7 @@ export const email = 'thedceventz@gmail.com';
 export const logo = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo_large.png';
 export const logo_foot = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/logo.png';
 export const url = 'https://thedcevents.com';
-export const desc = 'DC Events is an event management company located in Payyannur. We undertake all kinds events like weddings, birthday celebrations, corporate & college events.'
+export const desc = 'DC Events is an event organiser specialized in weddings, birthday celebrations, corporate events & more'
 export const asset_path = 'https://s3.ap-south-1.amazonaws.com/thedcevents.com/assets/';
 
 export const getEvents = (type) => {
