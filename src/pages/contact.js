@@ -82,6 +82,9 @@ export default () => {
                 <div>
                     <button className={'cob' + (busy ? ' disable' : '')} onClick={onSubmit}>SUBMIT</button>
                 </div>
+                <div className="c-f">
+                    I understand that this form collects my name &amp; my phone number so that I can be contacted. For more information, please check out our <a href="/privacy-policy">privacy policy</a>
+                </div>
             </div>
         </div>
     )

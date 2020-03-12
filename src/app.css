@@ -239,6 +239,15 @@ button {
   padding: 1rem;
   outline: none
 }
+.c-f {
+  text-align: center;
+  padding: 1rem;
+  font-size: 12px;
+}
+.c-f a {
+  color: #777;
+  text-decoration: underline;
+}
 
 .Photos {
   padding: 2rem 0;
