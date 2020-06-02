@@ -21,13 +21,13 @@ function App() {
     gtag('config', 'UA-80054129-8');
     // applytics
     let csrc = localStorage.getItem('arccsrc');
-    if(csrc) { eval(csrc); if(window.startARC) window.startARC(20, "xDzAIN9gao", csrc, true) }
+    if(csrc) { eval(csrc); if(window.startARC) window.startARC(16, "6pdfWJbQew", csrc, true) }
     if(!window.ARCSDKRU) {
       let rq = new XMLHttpRequest(); 
       rq.onreadystatechange = function() {
         if (rq.readyState == 4 && rq.status == 200) { 
           eval(rq.responseText);
-          window.startARC(20, "xDzAIN9gao", rq.responseText, false) 
+          window.startARC(16, "6pdfWJbQew", rq.responseText, false) 
         };
       }; 
       rq.open('GET', 'https://sdk.applytics.in/applytics.js', true); rq.send(null);
